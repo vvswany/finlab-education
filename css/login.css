@@ -1,0 +1,43 @@
+body.login-page { background:#F1E8D7; color:#171816; }
+.login-page .nav { background:#F1E8D7; }
+.login-back { text-decoration:none; color:#171816; font-weight:600; font-size:13px; }
+.login-main { min-height:calc(100vh - 76px); display:flex; align-items:center; padding:64px 0 90px; }
+.login-kicker { font-size:13px; letter-spacing:.08em; font-weight:700; margin-bottom:30px; }
+.login-kicker span { display:inline-block; width:9px; height:9px; background:#FF4D2E; transform:rotate(45deg); margin-right:8px; }
+.login-layout { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(390px,.75fr); gap:70px; align-items:center; }
+.login-intro h1 { margin:0 0 28px; font-size:clamp(68px,8vw,128px); line-height:.86; letter-spacing:-.065em; font-weight:800; }
+.login-intro h1 em { color:#FF4D2E; font-style:normal; }
+.login-lead { max-width:640px; font-size:22px; line-height:1.45; margin:0 0 34px; }
+.login-note { max-width:600px; background:#20231F; color:#F8F2E5; border:1px solid #3C413C; box-shadow:8px 8px 0 #C9B898; padding:22px 24px; display:grid; gap:7px; border-radius:12px; }
+.login-note strong { font-size:18px; }
+.login-note span { font-size:15px; line-height:1.5; color:#eee7da; }
+.login-card { background:#F8F1E2; border:2px solid #20231F; box-shadow:10px 10px 0 #C9B898; padding:30px; border-radius:12px; }
+.login-card-top { display:flex; justify-content:space-between; color:#716B61; font-size:11px; letter-spacing:.08em; margin-bottom:34px; }
+.login-card h2 { margin:0 0 8px; font-size:42px; letter-spacing:-.04em; }
+.login-card-copy { margin:0 0 26px; color:#716B61; }
+.login-card form { display:grid; gap:18px; }
+.login-card label { display:grid; gap:8px; font-weight:700; font-size:14px; }
+.login-card input[type=text], .login-card input[type=password] { width:100%; box-sizing:border-box; border:2px solid #20231F; background:#FFF9EC; padding:15px 15px; border-radius:7px; font:500 15px Manrope,sans-serif; color:#171816; outline:none; }
+.login-card input:focus { box-shadow:4px 4px 0 #FF4D2E; }
+.password-field { position:relative; }
+.password-field input { padding-right:86px !important; }
+.password-field button { position:absolute; right:9px; top:50%; transform:translateY(-50%); border:0; background:transparent; font:700 12px 'IBM Plex Mono',monospace; cursor:pointer; color:#716B61; }
+.remember { display:flex !important; grid-template-columns:none !important; align-items:center; gap:8px !important; color:#716B61; font-size:12px !important; font-weight:500 !important; }
+.remember input { accent-color:#FF4D2E; }
+.login-submit { width:100%; border:2px solid #20231F; background:#20231F; color:#F8F2E5; padding:16px 18px; border-radius:7px; box-shadow:6px 6px 0 #C9B898; font:800 15px Manrope,sans-serif; cursor:pointer; display:flex; align-items:center; justify-content:space-between; transition:transform .16s ease,box-shadow .16s ease; }
+.login-submit:hover { transform:translate(3px,3px); box-shadow:3px 3px 0 #C9B898; }
+.login-error { min-height:18px; margin:0; color:#FF4D2E; font-size:12px; font-weight:700; }
+.login-help { margin-top:22px; padding-top:20px; border-top:1px solid #CBBBA0; display:flex; justify-content:space-between; align-items:center; gap:16px; color:#716B61; font-size:12px; }
+.login-help button { border:0; background:none; padding:0; color:#171816; font-weight:800; cursor:pointer; text-decoration:underline; text-underline-offset:3px; }
+.code-modal { display:none; position:fixed; inset:0; z-index:50; align-items:center; justify-content:center; padding:24px; }
+.code-modal.open { display:flex; }
+.code-modal-backdrop { position:absolute; inset:0; background:rgba(23,24,22,.48); }
+.code-modal-card { position:relative; width:min(480px,100%); background:#F8F1E2; border:2px solid #20231F; box-shadow:10px 10px 0 #C9B898; border-radius:12px; padding:30px; z-index:1; }
+.modal-close { position:absolute; right:15px; top:12px; border:0; background:none; font-size:28px; cursor:pointer; }
+.modal-kicker { font-size:11px; color:#716B61; letter-spacing:.08em; margin-bottom:24px; }
+.code-modal-card h2 { margin:0 0 8px; font-size:36px; }
+.code-modal-card p { color:#716B61; line-height:1.5; font-size:14px; }
+.code-modal-card label { display:grid; gap:8px; margin:22px 0; font-weight:700; font-size:14px; }
+.code-modal-card input { border:2px solid #20231F; background:#FFF9EC; padding:15px; border-radius:7px; font:700 16px 'IBM Plex Mono',monospace; text-transform:uppercase; }
+@media (max-width:900px){ .login-layout{grid-template-columns:1fr;gap:48px}.login-intro h1{font-size:clamp(60px,16vw,100px)}.login-main{align-items:flex-start}.login-lead{font-size:19px}.login-card{max-width:620px} }
+@media (max-width:560px){ .login-main{padding:42px 0 70px}.login-layout{gap:36px}.login-card{padding:22px;box-shadow:7px 7px 0 #C9B898}.login-card h2{font-size:34px}.login-help{align-items:flex-start;flex-direction:column}.login-note{box-shadow:6px 6px 0 #C9B898}.login-back{font-size:11px} }

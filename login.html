@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F1E8D7">
+  <title>ФИНЛАБ — Вход</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="login-page">
+<div class="page">
+  <div class="site-noise" aria-hidden="true"></div>
+  <header class="nav"><div class="nav-inner">
+    <a class="brand" href="index.html" aria-label="ФИНЛАБ"><span>ФИН<span>ЛАБ</span></span></a>
+    <a class="login-back mono" href="index.html">← На главную</a>
+  </div></header>
+
+  <main class="login-main">
+    <div class="container">
+      <div class="login-kicker mono"><span></span> ФИНЛАБ / ВХОД</div>
+      <div class="login-layout">
+        <section class="login-intro">
+          <h1>Вход в<br><em>ФИНЛАБ.</em></h1>
+          <p class="login-lead">Здесь начинается твой личный маршрут: задачи, эксперименты и результаты сохраняются в одном месте.</p>
+          <div class="login-note">
+            <strong>Для ученика.</strong>
+            <span>Не нужно указывать лишние персональные данные. Для учебного доступа достаточно учётной записи, которую выдаёт школа или учитель.</span>
+          </div>
+        </section>
+
+        <section class="login-card" aria-label="Форма входа">
+          <div class="login-card-top mono"><span>ДОСТУП</span><span>УЧЕНИК</span></div>
+          <h2>Войти</h2>
+          <p class="login-card-copy">Введи данные своей учётной записи.</p>
+          <form id="loginForm">
+            <label>Логин
+              <input id="login" name="login" type="text" autocomplete="username" placeholder="например, ivan3221" required>
+            </label>
+            <label>Пароль
+              <div class="password-field">
+                <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required>
+                <button type="button" id="togglePassword" aria-label="Показать пароль">Показать</button>
+              </div>
+            </label>
+            <label class="remember"><input type="checkbox" id="remember"> <span>Запомнить меня на этом устройстве</span></label>
+            <button class="login-submit" type="submit">Войти в ФИНЛАБ <span>→</span></button>
+            <p class="login-error" id="loginError" role="alert"></p>
+          </form>
+          <div class="login-help">
+            <span>Нет учётной записи?</span>
+            <button type="button" id="classCodeBtn">Войти по коду класса</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div class="code-modal" id="codeModal" aria-hidden="true">
+    <div class="code-modal-backdrop" data-close-code></div>
+    <div class="code-modal-card" role="dialog" aria-modal="true" aria-labelledby="codeTitle">
+      <button class="modal-close" type="button" data-close-code aria-label="Закрыть">×</button>
+      <div class="mono modal-kicker">БЫСТРЫЙ ВХОД</div>
+      <h2 id="codeTitle">Код класса</h2>
+      <p>Если учитель выдал код для входа, введи его здесь. После подключения можно будет выбрать своё имя в классе.</p>
+      <label>Код
+        <input id="classCode" type="text" inputmode="text" maxlength="12" placeholder="например, FL-7K2P">
+      </label>
+      <button class="login-submit" id="classCodeSubmit" type="button">Продолжить <span>→</span></button>
+      <p class="login-error" id="codeError" role="alert"></p>
+    </div>
+  </div>
+</div>
+<script src="js/login.js"></script>
+</body>
+</html>

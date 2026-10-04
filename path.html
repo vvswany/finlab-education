@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F1E8D7">
+  <meta name="description" content="ФИНЛАБ — шесть разделов финансовой грамотности через математику.">
+  <title>ФИНЛАБ — Путь</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/path.css">
+</head>
+<body class="path-page">
+<div class="page">
+  <div class="site-noise" aria-hidden="true"></div>
+  <header class="nav"><div class="nav-inner">
+    <a class="brand" href="index.html" aria-label="ФИНЛАБ"><span>ФИН<span>ЛАБ</span></span></a>
+    <nav class="nav-links" aria-label="Основная навигация">
+      <a href="index.html#about">О проекте</a>
+      <a href="index.html#directions">Направления</a>
+      <a class="active" href="path.html">Путь</a>
+      <a href="index.html#practice">Практика</a>
+    </nav>
+    <a class="nav-cta" href="login.html">Войти →</a>
+    <button class="menu-btn" aria-label="Открыть меню"><span></span><span></span></button>
+  </div></header>
+
+  <main>
+    <!-- Этот верхний блок намеренно оставлен таким же по композиции, как в утверждённой версии 1.23. -->
+    <section class="path-hero section">
+      <div class="container">
+        <div class="path-hero-top reveal">
+          <div>
+            <div class="section-kicker">ФИНЛАБ / ПУТЬ</div>
+            <h1>Шесть шагов.<br><span>Один навык.</span></h1>
+          </div>
+          <div class="path-hero-note boxed-copy">
+            <strong>Не учим финансы по кусочкам.</strong>
+            <p>Сначала понимаем числа, потом проверяем их в ситуации и только после этого принимаем решение.</p>
+          </div>
+        </div>
+
+        <div class="route-board reveal" id="routeBoard">
+          <div class="route-board-head">
+            <span class="mono">МАРШРУТ ОБУЧЕНИЯ</span>
+            <span class="route-status"><i></i><b id="routeStatus">ШАГ 01 / 06</b></span>
+          </div>
+          <div class="route-track" id="routeTrack">
+            <div class="route-line"></div>
+            <div class="route-progress" id="routeProgress"></div>
+            <div class="route-ball" id="routeBall"><span></span></div>
+            <button class="route-node active" data-step="0"><b>01</b><span>Деньги</span></button>
+            <button class="route-node" data-step="1"><b>02</b><span>Проценты</span></button>
+            <button class="route-node" data-step="2"><b>03</b><span>Бюджет</span></button>
+            <button class="route-node" data-step="3"><b>04</b><span>Кредиты</span></button>
+            <button class="route-node" data-step="4"><b>05</b><span>Инвестиции</span></button>
+            <button class="route-node" data-step="5"><b>06</b><span>Решения</span></button>
+          </div>
+          <div class="route-board-foot">
+            <span class="mono">ПРОГРЕСС</span>
+            <strong id="routePercent">17%</strong>
+            <span class="route-hint" id="routeHint">Выбери раздел, с которого хочешь начать.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Вместо длинных объяснений — шесть коротких интерактивных входов в практику. -->
+    <section class="section sections-section" id="sections">
+      <div class="container">
+        <div class="sections-heading reveal">
+          <div>
+            <div class="section-kicker">РАЗДЕЛЫ ФИНЛАБ</div>
+            <h2>Выбирай тему.<br><span>Начинай.</span></h2>
+          </div>
+          <p>Каждая карточка — отдельный вход в практику. Коротко знакомимся с темой и сразу переходим к ситуации.</p>
+        </div>
+
+        <div class="section-grid" id="sectionGrid">
+          <article class="section-card active reveal" data-step="0">
+            <div class="section-card-top"><span class="section-number">01</span><span class="section-label">БАЗА</span></div>
+            <div class="section-card-copy"><h3>Деньги</h3><p>Разберёмся, откуда берутся доходы, расходы и стоимость. Научимся читать финансовую ситуацию через числа.</p></div>
+            <button class="section-start" data-step="0">Начать <span>→</span></button>
+          </article>
+
+          <article class="section-card reveal delay-1" data-step="1">
+            <div class="section-card-top"><span class="section-number">02</span><span class="section-label">РАСЧЁТЫ</span></div>
+            <div class="section-card-copy"><h3>Проценты</h3><p>Скидки, наценки, рост и уменьшение. Сравним варианты и увидим, где процент меняет решение.</p></div>
+            <button class="section-start" data-step="1">Начать <span>→</span></button>
+          </article>
+
+          <article class="section-card reveal delay-2" data-step="2">
+            <div class="section-card-top"><span class="section-number">03</span><span class="section-label">ПЛАН</span></div>
+            <div class="section-card-copy"><h3>Бюджет</h3><p>Соберём доходы и расходы, расставим приоритеты и проверим, хватает ли денег на цель.</p></div>
+            <button class="section-start" data-step="2">Начать <span>→</span></button>
+          </article>
+
+          <article class="section-card reveal" data-step="3">
+            <div class="section-card-top"><span class="section-number">04</span><span class="section-label">КРЕДИТ</span></div>
+            <div class="section-card-copy"><h3>Кредиты</h3><p>Посчитаем платёж и переплату, сравним условия и увидим настоящую стоимость займа.</p></div>
+            <button class="section-start" data-step="3">Начать <span>→</span></button>
+          </article>
+
+          <article class="section-card reveal delay-1" data-step="4">
+            <div class="section-card-top"><span class="section-number">05</span><span class="section-label">РОСТ</span></div>
+            <div class="section-card-copy"><h3>Инвестиции</h3><p>Посмотрим, как работают доходность, время и риск — и почему высокий результат не бывает бесплатным.</p></div>
+            <button class="section-start" data-step="4">Начать <span>→</span></button>
+          </article>
+
+          <article class="section-card reveal delay-2" data-step="5">
+            <div class="section-card-top"><span class="section-number">06</span><span class="section-label">ПРАКТИКА</span></div>
+            <div class="section-card-copy"><h3>Решения</h3><p>Объединим расчёты, сравним варианты и выберем решение, которое можно обосновать цифрами.</p></div>
+            <button class="section-start" data-step="5">Начать <span>→</span></button>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="index.html"><span>ФИН<span>ЛАБ</span></span></a>
+    <p>Финансовая грамотность через математику.</p>
+    <span>v1.25 / path</span>
+  </footer>
+</div>
+<script src="js/path.js"></script>
+</body>
+</html>

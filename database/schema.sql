@@ -1,0 +1,50 @@
+CREATE TABLE IF NOT EXISTS users (
+  id BIGSERIAL PRIMARY KEY,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  password_hash TEXT NOT NULL,
+  display_name VARCHAR(100) NOT NULL,
+  role VARCHAR(20) NOT NULL DEFAULT 'student' CHECK (role IN ('student','teacher','admin')),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE TABLE IF NOT EXISTS classes (
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  code VARCHAR(20) UNIQUE NOT NULL,
+  teacher_id BIGINT REFERENCES users(id) ON DELETE SET NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE TABLE IF NOT EXISTS class_members (
+  class_id BIGINT NOT NULL REFERENCES classes(id) ON DELETE CASCADE,
+  user_id BIGINT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  joined_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  PRIMARY KEY(class_id,user_id)
+);
+CREATE TABLE IF NOT EXISTS modules (
+  id BIGSERIAL PRIMARY KEY,
+  number INT UNIQUE NOT NULL,
+  title VARCHAR(120) NOT NULL,
+  description TEXT NOT NULL,
+  slug VARCHAR(80) UNIQUE NOT NULL
+);
+CREATE TABLE IF NOT EXISTS tasks (
+  id BIGSERIAL PRIMARY KEY,
+  module_id BIGINT NOT NULL REFERENCES modules(id) ON DELETE CASCADE,
+  title VARCHAR(200) NOT NULL,
+  description TEXT NOT NULL,
+  type VARCHAR(20) NOT NULL CHECK(type IN ('calculate','compare','decision')),
+  difficulty SMALLINT NOT NULL DEFAULT 1 CHECK(difficulty BETWEEN 1 AND 5),
+  content JSONB NOT NULL DEFAULT '{}'::jsonb,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE TABLE IF NOT EXISTS attempts (
+  id BIGSERIAL PRIMARY KEY,
+  user_id BIGINT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  task_id BIGINT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
+  answer JSONB NOT NULL DEFAULT '{}'::jsonb,
+  is_correct BOOLEAN,
+  score NUMERIC(6,2),
+  time_spent_seconds INT,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS idx_attempts_user ON attempts(user_id);
+CREATE INDEX IF NOT EXISTS idx_tasks_module ON tasks(module_id);

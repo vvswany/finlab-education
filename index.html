@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8f6">
+  <meta name="description" content="ФИНЛАБ — финансовая грамотность через математику.">
+  <title>ФИНЛАБ — финансовая грамотность через математику</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page">
+  <div class="site-noise" aria-hidden="true"></div>
+
+  <header class="nav"><div class="nav-inner">
+    <a class="brand" href="#top" aria-label="ФИНЛАБ"><span>ФИН<span>ЛАБ</span></span></a>
+    <nav class="nav-links" aria-label="Основная навигация">
+      <a href="#about">О проекте</a>
+      <a href="#directions">Направления</a>
+      <a href="path.html">Путь</a>
+      <a href="#practice">Практика</a>
+    </nav>
+    <a class="nav-cta" href="login.html">Войти →</a>
+    <button class="menu-btn" aria-label="Открыть меню"><span></span><span></span></button>
+  </div></header>
+
+  <main id="top">
+    <section class="hero section"><div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse-dot"></span> ФИНАНСЫ × МАТЕМАТИКА</div>
+        <h1>Деньги — это <em>тоже математика.</em></h1>
+        <p class="hero-lead boxed-copy">Разбирайся в финансах через задачи, эксперименты и расчёты. Не просто учись — проверяй, как всё работает.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#practice">Попробовать <span>↗</span></a>
+          <a class="btn btn-ghost" href="#directions">Как это работает <span>↓</span></a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal delay-1" aria-label="Интерактивная демонстрация роста">
+        <div class="float-symbol symbol-percent">%</div>
+        <div class="float-symbol symbol-ruble">₽</div>
+        <div class="float-symbol symbol-sigma">Σ</div>
+        <div class="lab-card">
+          <div class="lab-top">
+            <span>ДИНАМИКА</span>
+            <span class="live"><i></i> СЕЙЧАС</span>
+          </div>
+          <div class="lab-value"><strong id="heroValue">10 000</strong><small> ₽</small></div>
+          <div class="lab-change"><strong id="heroGrowth">+12,4%</strong> <span>за период</span></div>
+          <div class="chart-wrap">
+            <svg id="heroChart" viewBox="0 0 620 250" preserveAspectRatio="none" role="img" aria-label="График роста капитала">
+              <defs>
+                <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-opacity=".25"/>
+                  <stop offset="100%" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path class="grid-line" d="M0 210H620M0 150H620M0 90H620M0 30H620"/>
+              <path class="area" d="M0 210 C70 206 76 180 130 186 S195 155 240 165 S305 115 350 138 S405 95 450 105 S515 48 570 66 S600 38 620 24 V250 H0Z"/>
+              <path class="curve" d="M0 210 C70 206 76 180 130 186 S195 155 240 165 S305 115 350 138 S405 95 450 105 S515 48 570 66 S600 38 620 24"/>
+              <circle id="heroDragPoint" class="hero-drag-point" cx="480" cy="88" r="8" tabindex="0" aria-label="Точка графика"/>
+            </svg>
+            <div class="hero-chart-value" id="heroChartValue">10 000 ₽</div>
+          </div>
+          <div class="lab-bottom">
+            <span>1 год</span><span>2 года</span><span>3 года</span><span>4 года</span>
+          </div>
+        </div>
+        <div class="mini-card">
+          <span class="mini-icon">×</span>
+          <div><b>Считай</b><small>а не угадывай</small></div>
+        </div>
+      </div>
+    </div></section>
+
+<section class="section intro" id="about">
+      <div class="container">
+        <div class="section-kicker reveal">01 / ИДЕЯ</div>
+        <div class="intro-grid">
+          <div class="intro-copy reveal">
+            <h2>Финансовая<br><span>грамотность</span><br>без скуки.</h2>
+            <p class="intro-lead boxed-copy">Не учебник. Не банк. Лаборатория, где можно потрогать цифры руками и увидеть, что изменится.</p>
+          </div>
+
+          <div class="vault-card reveal delay-1" id="vaultCard">
+            <div class="vault-tape"></div>
+            <div class="vault-top mono"><span>ЗАМЕТКА / 01</span><span>ДОСТУП: ОТКРЫТО</span></div>
+            <div class="vault-stage cushion-stage">
+              <div class="cushion-svg-wrap">
+                <svg class="cushion-svg" viewBox="0 0 360 230" aria-label="Иллюстрация подушки безопасности" role="img">
+                  <ellipse class="cushion-svg-shadow" cx="184" cy="183" rx="116" ry="24"/>
+                  <path class="cushion-svg-body" d="M78 65 C62 48 63 28 82 23 C104 18 118 39 133 38 C169 27 219 26 264 37 C281 30 301 16 316 25 C331 34 321 54 309 66 C323 88 327 121 317 145 C307 169 286 177 263 178 C223 195 163 197 125 182 C108 188 88 203 76 191 C66 181 76 164 82 151 C63 128 58 96 66 75 C69 69 73 66 78 65 Z"/>
+                  <path class="cushion-svg-opening" d="M82 65 C70 82 67 112 79 139 C87 156 99 168 113 178 C124 163 132 145 131 121 C130 96 118 75 99 64 Z"/>
+                  <path class="cushion-svg-seam" d="M91 69 C83 88 82 111 90 132 C96 148 105 160 116 168"/>
+                  <path class="cushion-svg-rib" d="M88 88 L114 79 M84 108 L120 98 M85 129 L123 118 M93 149 L120 138"/>
+                  <path class="cushion-svg-fold" d="M139 47 C166 38 206 37 235 43"/>
+                </svg>
+              </div>
+              <div class="vault-caption">
+                <strong id="vaultValue">100 000 ₽</strong>
+                <span class="mono" id="vaultStatus">ФИНАНСОВАЯ ПОДУШКА</span>
+              </div>
+            </div>
+            <div class="vault-controls">
+              <button class="vault-btn active" data-vault="save">Накопить подушку</button>
+            </div>
+            <div class="vault-hint mono">настрой цель и срок — остальное посчитаем</div>
+            <div class="vault-planner" id="vaultPlanner">
+              <div class="vault-planner-head"><strong>Сколько хочешь накопить?</strong><output id="vaultGoalOut">100 000 ₽</output></div>
+              <input id="vaultGoal" type="range" min="20000" max="500000" step="5000" value="100000">
+              <div class="vault-planner-row">
+                <label>Срок <output id="vaultTermOut">12 мес.</output><input id="vaultTerm" type="range" min="3" max="60" step="1" value="12"></label>
+                <div class="vault-plan-result"><span class="mono">ОТКЛАДЫВАТЬ В МЕСЯЦ</span><strong id="vaultMonthlyOut">8 333 ₽</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section directions" id="directions">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="section-kicker">02 / ВНУТРИ ЛАБОРАТОРИИ</div>
+            <h2>Не читай.<br><span>Исследуй.</span></h2>
+          </div>
+          <div class="heading-note">
+            <p class="boxed-copy">Каждый блок — отдельный инструмент. Выбирай, меняй условия, смотри результат.</p>
+            <svg class="modules-arrow" viewBox="0 0 560 270" aria-hidden="true" focusable="false">
+              <path class="modules-arrow-path" d="M 72 18 C 36 42, 48 82, 92 72 C 134 62, 126 22, 164 34 C 202 46, 188 96, 230 108 C 272 120, 264 72, 306 84 C 350 97, 332 150, 374 164 C 418 178, 404 126, 446 142 C 474 152, 478 126, 500 116 C 510 112, 518 112, 526 114" />
+              <path class="modules-arrow-head" d="M 526 114 L 507 108 M 526 114 L 510 124" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="module-board">
+          <a class="feature-card card-a reveal" href="#practice" data-module="practice">
+            <div class="card-head"><span>01 / ПРАКТИКА</span><span>↗</span></div>
+            <div class="card-art formula-art"><span>12%</span><i>+</i><span>8%</span><b>=</b><strong>?</strong></div>
+            <div class="module-copy"><h3>Практика</h3><p>Задачи из ситуаций, с которыми сталкиваешься в жизни.</p></div>
+            <div class="card-link">Открыть модуль <span>↗</span></div>
+          </a>
+
+          <a class="feature-card card-b reveal delay-1" href="#tools" data-module="simulator">
+            <div class="card-head"><span>02 / СИМУЛЯТОР</span><span>↗</span></div>
+            <div class="card-art bars-art"><i style="height:34%"></i><i style="height:52%"></i><i style="height:70%"></i><i style="height:88%"></i><i style="height:100%"></i></div>
+            <div class="module-copy"><h3>Симуляторы</h3><p>Меняй параметры и наблюдай за результатом в реальном времени.</p></div>
+            <div class="card-link">Запустить <span>↗</span></div>
+          </a>
+
+          <a class="feature-card card-c reveal delay-2" href="#tools" data-module="tools">
+            <div class="card-head"><span>03 / ИНСТРУМЕНТЫ</span><span>↗</span></div>
+            <div class="card-art ring-art"><div>₽</div></div>
+            <div class="module-copy"><h3>Инструменты</h3><p>Калькуляторы, модели и визуальные подсказки для расчётов.</p></div>
+            <div class="card-link">Открыть <span>↗</span></div>
+          </a>
+
+          <a class="feature-card card-d reveal delay-3" href="path.html" data-module="path">
+            <div class="card-head"><span>04 / МАРШРУТ</span><span>↗</span></div>
+            <div class="card-art path-art"><span>1</span><i></i><span>2</span><i></i><span>3</span><i></i><span>4</span></div>
+            <div class="module-copy"><h3>Путь</h3><p>Последовательный маршрут от базы до сложных финансовых решений.</p></div>
+            <div class="card-link">Начать <span>↗</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section calculator-section" id="tools">
+      <div class="container calc-grid">
+        <div class="calc-copy reveal">
+          <div class="section-kicker">03 / ПОПРОБУЙ САМ</div>
+          <h2>Числа становятся<br><span>понятными.</span></h2>
+          <p class="boxed-copy">Измени сумму, ставку или срок — результат пересчитается сразу. Здесь цифры не просто показывают ответ, а объясняют, откуда он взялся.</p>
+        </div>
+        <div class="calculator reveal delay-1" id="calculator">
+          <div class="calc-head"><span>СЛОЖНЫЙ ПРОЦЕНТ</span><span class="calc-live">ИНТЕРАКТИВ</span></div>
+          <div class="calc-main">
+            <div>
+              <div class="calc-number"><span id="calcResult">11 664</span><span class="calc-currency"> ₽</span></div>
+              <div class="calc-sub mono" id="calcSub">через 2 года</div>
+            </div>
+            <div class="calc-form">
+              <label>Старт <output id="amountOut">10 000 ₽</output><input id="amount" type="range" min="1000" max="50000" step="500" value="10000"></label>
+              <label>Ставка <output id="rateOut">8%</output><input id="rate" type="range" min="1" max="20" step=".5" value="8"></label>
+              <label>Срок <output id="yearsOut">2 года</output><input id="years" type="range" min="1" max="10" step="1" value="2"></label>
+            </div>
+          </div>
+          <div class="calc-result-line">
+            <div><span class="mono">РОСТ</span><b id="growthOut">+16,6%</b></div>
+            <div class="mini-bars" id="miniBars"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section path-section" id="path">
+      <div class="container">
+        <div class="section-kicker reveal">04 / МАРШРУТ</div>
+        <div class="path-heading reveal">
+          <h2>Шесть шагов.<br><span>Один навык.</span></h2>
+          <p class="boxed-copy">Не перепрыгиваем через базу. Каждый следующий шаг строится на предыдущем.</p>
+        </div>
+        <div class="path-paper reveal" id="pathPaper">
+          <div class="path-rule"></div>
+          <div class="path-ball" id="pathBall"><span></span></div>
+          <div class="path-items">
+            <button class="step active" data-step="0"><b>01</b><span>Деньги</span><small>База</small></button>
+            <button class="step" data-step="1"><b>02</b><span>Проценты</span><small>Расчёты</small></button>
+            <button class="step" data-step="2"><b>03</b><span>Бюджет</span><small>Планирование</small></button>
+            <button class="step" data-step="3"><b>04</b><span>Кредиты</span><small>Обязательства</small></button>
+            <button class="step" data-step="4"><b>05</b><span>Инвестиции</span><small>Рост</small></button>
+            <button class="step" data-step="5"><b>06</b><span>Решения</span><small>Практика</small></button>
+          </div>
+          <div class="path-note mono"><span>ПРОГРЕСС</span><strong id="pathProgress">01 / 06</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section practice-section" id="practice"><div class="container">
+      <div class="practice-card reveal">
+        <div class="practice-meta"><span>ДЕМО / ЗАДАЧА</span><span>01:30</span></div>
+        <div class="practice-content">
+          <div>
+            <div class="section-kicker">ПОПРОБУЙ</div>
+            <h2>Сможешь посчитать<br><span>выгодный вариант?</span></h2>
+            <p>У тебя есть 10 000 ₽. Банк предлагает 8% годовых с капитализацией. Сколько будет через два года?</p>
+          </div>
+          <button class="btn btn-dark" id="demoBtn">Решить задачу <span>↗</span></button>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="section final-cta">
+      <div class="container">
+        <div class="decision-card reveal" id="decisionCard">
+          <div class="decision-top mono"><span>ФИНАЛ / 06</span><span>ТВОЙ ХОД</span></div>
+          <div class="decision-grid">
+            <div class="decision-copy">
+              <h2>Считай.<br><span>Проверяй.</span><br>Решай.</h2>
+            </div>
+            <div class="decision-machine">
+              <p class="mono">ЧТО БУДЕШЬ ДЕЛАТЬ?</p>
+              <button class="decision-option active" data-decision="practice"><span>01</span><b>Решить задачу</b><i>→</i></button>
+              <button class="decision-option" data-decision="simulate"><span>02</span><b>Запустить симулятор</b><i>→</i></button>
+              <button class="decision-option" data-decision="calculate"><span>03</span><b>Посчитать самому</b><i>→</i></button>
+              <div class="decision-result mono" id="decisionResult">ГОТОВ К ПЕРВОЙ ЗАДАЧЕ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#top"><span class="brand-mark"><i></i><i></i><i></i></span><span>ФИН<span>ЛАБ</span></span></a>
+    <p>Финансовая грамотность через математику.</p>
+    <span>v1.0 / prototype</span>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="js/main.js"></script>
+  </div>
+</body>
+</html>

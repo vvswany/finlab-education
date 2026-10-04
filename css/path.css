@@ -1,0 +1,72 @@
+/* FINLAB v1.25 — PATH: one approved route + direct section cards */
+.path-page{background:#F1E8D7;color:#171816}
+.path-page .nav{background:rgba(248,241,226,.96);border-bottom:1px solid #CBBBA0}
+.path-page .nav-links a.active{font-weight:800;text-decoration:underline;text-underline-offset:6px}
+.path-hero{padding-top:74px;padding-bottom:92px}
+.path-hero-top{display:grid;grid-template-columns:1.1fr .65fr;gap:64px;align-items:end;margin-bottom:58px}
+.path-hero h1{font-size:clamp(56px,8vw,112px);line-height:.92;letter-spacing:-.055em;margin:12px 0 0}
+.path-hero h1 span,.sections-heading h2 span{color:#FF4D2E}
+.path-hero-note{max-width:430px;margin-left:auto;font-size:18px;line-height:1.45;padding:22px 24px}
+.sections-heading > p{max-width:620px;margin:0 0 0 auto;padding:24px 26px;border:2px solid #20231F;background:#F8F1E2;color:#20231F;box-shadow:8px 8px 0 #C9B898;font-size:18px;line-height:1.5}
+.path-hero-note strong{font-size:22px;display:block;margin-bottom:8px}
+.path-hero-note p{margin:0}
+.route-board{background:#20231F;color:#F8F2E5;border:1px solid #3C413C;box-shadow:10px 10px 0 #C9B898;padding:22px 24px 26px;position:relative;overflow:hidden}
+.route-board-head,.route-board-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:12px;letter-spacing:.08em}
+.route-status{display:flex;align-items:center;gap:8px}.route-status i{width:7px;height:7px;border-radius:50%;background:#FF4D2E;display:block}
+.route-track{height:310px;position:relative;margin:12px 12px 0}
+.route-line,.route-progress{position:absolute;left:7%;right:7%;top:154px;height:3px;background:#55594F}
+.route-progress{right:auto;width:0;background:#FF4D2E;transition:width .55s cubic-bezier(.2,.8,.2,1)}
+.route-ball{position:absolute;top:143px;left:7%;width:25px;height:25px;border-radius:50%;background:#FF4D2E;box-shadow:4px 4px 0 #F0CF43;z-index:3;transition:left .65s cubic-bezier(.22,.85,.24,1),top .65s cubic-bezier(.22,.85,.24,1)}
+.route-ball span{display:block;width:7px;height:7px;background:#171816;border-radius:50%;margin:9px auto}
+.route-node{position:absolute;top:123px;transform:translateX(-50%);border:0;background:transparent;color:#F8F2E5;width:120px;cursor:pointer;padding:0;text-align:center;font-family:inherit;z-index:4}
+.route-node:nth-of-type(1){left:7%}.route-node:nth-of-type(2){left:24.2%}.route-node:nth-of-type(3){left:41.4%}.route-node:nth-of-type(4){left:58.6%}.route-node:nth-of-type(5){left:75.8%}.route-node:nth-of-type(6){left:93%}
+.route-node b{display:flex;width:62px;height:62px;margin:auto;border:2px solid #55594F;background:#20231F;border-radius:50%;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:16px;transition:.25s}
+.route-node span{display:block;margin-top:14px;font-size:14px;font-weight:800}
+.route-node.active b,.route-node:hover b{border-color:#FF4D2E;background:#FF4D2E;color:#171816;box-shadow:5px 5px 0 #F0CF43}
+.route-node.active span{color:#FF4D2E}
+.route-board-foot{border-top:1px solid #3C413C;padding-top:18px}.route-board-foot strong{font-size:16px;margin-right:auto}.route-hint{font-family:Manrope,sans-serif;letter-spacing:0;font-size:13px;color:#BEB9AE}
+
+.sections-section{padding-top:0;padding-bottom:105px}
+.sections-heading{display:grid;grid-template-columns:1fr .62fr;gap:60px;align-items:end;margin-bottom:34px}
+.sections-heading h2{font-size:clamp(48px,5.4vw,74px);line-height:.94;letter-spacing:-.045em;margin:10px 0 0}
+.sections-heading p{margin:0;color:#4E4A43;line-height:1.5}
+.section-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.section-card{position:relative;display:flex;flex-direction:column;min-height:330px;padding:23px;border:1px solid #CBBBA0;background:#F8F1E2;color:#171816;text-align:left;transition:transform .2s,box-shadow .2s,border-color .2s,background .2s;overflow:hidden}
+.section-card:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 #C9B898;border-color:#171816}
+.section-card.active{background:#20231F;color:#F8F2E5;border-color:#20231F;box-shadow:8px 8px 0 #FF4D2E}
+.section-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;font:12px 'IBM Plex Mono',monospace}
+.section-label{font-size:10px;letter-spacing:.08em}
+.section-card-copy{margin-top:48px;max-width:360px}
+.section-card-copy h3{font-size:42px;line-height:1;letter-spacing:-.045em;margin:0 0 12px}
+.section-card-copy p{font-size:14px;line-height:1.5;color:#5D574F;margin:0;max-width:340px}
+.section-card.active .section-card-copy p{color:#C8C3B9}
+.section-start{align-self:flex-start;margin-top:auto;border:0;background:#171816;color:#F8F2E5;padding:13px 16px;font:700 13px Manrope;cursor:pointer;box-shadow:5px 5px 0 #C9B898;transition:transform .18s,box-shadow .18s,background .18s}
+.section-start span{margin-left:22px;font-size:16px}
+.section-start:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 #FF4D2E;background:#FF4D2E;color:#171816}
+.section-card.active .section-start{background:#F8F2E5;color:#171816;box-shadow:5px 5px 0 #FF4D2E}
+.section-card.active .section-start:hover{background:#FF4D2E}
+.section-start:focus-visible,.route-node:focus-visible{outline:3px solid #FF4D2E;outline-offset:3px}
+
+@media(max-width:1000px){
+ .path-hero-top,.sections-heading{grid-template-columns:1fr;gap:28px}
+ .path-hero-note{margin-left:0}
+ .section-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+ .path-hero{padding-top:46px;padding-bottom:70px}
+ .path-hero h1{font-size:54px}
+ .route-board{padding:18px 14px 20px}
+ .route-track{height:520px;margin:10px 0}
+ .route-line,.route-progress{left:34px;right:auto;top:30px;bottom:30px;width:3px;height:auto}
+ .route-progress{height:0;width:3px;bottom:auto}
+ .route-ball{left:23px;top:17px;transition:top .6s cubic-bezier(.22,.85,.24,1)}
+ .route-node{left:0!important;transform:none;width:100%;text-align:left;padding-left:74px;height:74px}
+ .route-node:nth-of-type(1){top:0}.route-node:nth-of-type(2){top:86px}.route-node:nth-of-type(3){top:172px}.route-node:nth-of-type(4){top:258px}.route-node:nth-of-type(5){top:344px}.route-node:nth-of-type(6){top:430px}
+ .route-node b{position:absolute;left:3px;top:4px;width:56px;height:56px}.route-node span{padding-top:13px;margin:0;font-size:17px}
+ .route-board-foot{flex-wrap:wrap}.route-hint{width:100%;margin-top:4px}
+ .sections-section{padding-top:0;padding-bottom:70px}
+ .section-grid{grid-template-columns:1fr;gap:12px}
+ .section-card{min-height:300px}
+ .section-card-copy{margin-top:38px}
+ .section-card-copy h3{font-size:38px}
+}
